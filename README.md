@@ -6,11 +6,12 @@ A full-stack inventory management application. Uses React, Ruby on Rails, and Po
 LIVE LINKS:
 
 font-end link:
+
 back-end link: 
 
 GITHUB LINKS:
-front-end link: 
-back-end link: 
+front-end link: https://github.com/hannahbannan/Tooli-Front-End/blob/master/README.md
+back-end link: https://github.com/hannahbannan/Tooli-Back-End
 
 ## Project Description
 
@@ -46,7 +47,7 @@ Crew and admin can search for a tool and pull up its information and location.
 |  Research user auth for admin      |    H     |       5        |               |             |
 |  Set up admin/crew routes          |    H     |       4        |               |             |
 |  Deploy server on heroku           |    H     |       2        |               |             |
-| Total                              |    H     |      25        |               |             |
+|  Total                             |    H     |      25        |               |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -65,10 +66,11 @@ Crew and admin can search for a tool and pull up its information and location.
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
 | CSS/ Styling                                  |    H     |       8        |               |             |
+| Deploy on Netlify/Surge                       |    H     |       2        |               |             |
 | Site logo                                     |    M     |       2        |               |             |
-| Total                                         |          |       59       |               |             |
+| Total                                         |          |       61       |               |             |
 
-TOTAL HOURS: 80 Hours
+TOTAL HOURS: 86 Hours
 
 # POST-MVP 
 
