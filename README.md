@@ -29,12 +29,12 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 
 # USER STORIES
 
-Admin user will be able to login and will have access to full CRUD for sites and tools. 
-Admin can create, update, and delete construction sites and tools.
-Admin can also see a log of current locations for all tools, and see which crewmember updated the location log.
-Crew user will be able to login and will have access to RU for sites and tools.
-Crew can update the location of a tool.
-Crew and admin can search for a tool and pull up its information and location.
+* Admin user will be able to login and will have access to full CRUD for sites and tools. 
+* Admin can create, update, and delete construction sites and tools.
+* Admin can also see a log of current locations for all tools, and see which crewmember updated the location log.
+* Crew user will be able to login and will have access to RU for sites and tools.
+* Crew can update the location of a tool.
+* Crew and admin can search for a tool and pull up its information and location.
 
 # MVP Matrices
 
