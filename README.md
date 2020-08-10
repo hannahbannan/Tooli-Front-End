@@ -17,7 +17,7 @@ back-end link: https://github.com/hannahbannan/Tooli-Back-End
 
 ## Project Description
 
-An inventory management application that tracks tools and construction equipment across a company's construction sites. There will be two levels of users, admin and crew. I am building this app for Simzee Construction & Development, after one of their project managers (also my boyfriend) mentioned that they are always losing track of where there tools and equipment are.
+An inventory management application that tracks tools and construction equipment across a company's construction sites. There will be two levels of users, admin and crew. I am building this app for Simzee Construction & Development, after one of their project managers (also my boyfriend) mentioned that they are always losing track of where their tools and equipment are.
 
 ## WireFrames
 
