@@ -11,7 +11,7 @@ back-end link:
 
 GITHUB LINKS:
 
-front-end link: https://github.com/hannahbannan/Tooli-Front-End/blob/master/README.md
+front-end link: https://github.com/hannahbannan/Tooli-Front-End
 
 back-end link: https://github.com/hannahbannan/Tooli-Back-End
 
