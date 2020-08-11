@@ -8,7 +8,7 @@ LIVE LINKS:
 
 font-end link: https://tooli.netlify.app/
 
-back-end link: 
+back-end link: https://tooli.herokuapp.com/
 
 GITHUB LINKS:
 
@@ -49,8 +49,8 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Set up CRUD routes                |    H     |       4        |               |             |
 |  Research user auth for admin      |    H     |       5        |               |             |
 |  Set up admin/crew routes          |    H     |       4        |               |             |
-|  Deploy server on heroku           |    H     |       2        |               |             |
-|  Total                             |    H     |      26        |      0.5      |             |
+|  Deploy server on heroku           |    H     |       2        |      0.5      |             |
+|  Total                             |    H     |      26        |       1       |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
