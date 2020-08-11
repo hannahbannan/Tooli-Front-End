@@ -47,18 +47,18 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Config schema for tools and sites |    H     |       3        |               |             |
 |  Config log join table             |    H     |       1        |               |             |
 |  Set up CRUD routes                |    H     |       4        |               |             |
-|  Research user auth for admin      |    H     |       5        |               |             |
+|  Research user auth for admin      |    H     |       5        |      1.5      |             |
 |  Set up admin/crew routes          |    H     |       4        |               |             |
 |  Deploy server on heroku           |    H     |       2        |      0.5      |             |
-|  Total                             |    H     |      26        |       1       |             |
+|  Total                             |    H     |      26        |      2.5      |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Spin up React app                             |    H     |       1        |     0.5       |             |
-| Navbar & Footer                               |    H     |       2        |               |             |
-| React Router                                  |    H     |       3        |               |             |
+| Navbar & Footer                               |    H     |       2        |     0.5       |             |
+| React Router                                  |    H     |       3        |      1        |             |
 | Login page                                    |    H     |       3        |               |             |
-| Research login/cookies                        |    H     |       6        |               |             |
+| Research login/cookies                        |    H     |       6        |     1.5        |             |
 | Sites list/dashboard                          |    H     |       4        |               |             |
 | Google Maps API research                      |    H     |       4        |               |             |
 | Implement google maps API for dashboard       |    H     |       3        |               |             |
@@ -71,7 +71,7 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | CSS/ Styling                                  |    H     |       8        |               |             |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |             |
 | Site logo                                     |    M     |       2        |               |             |
-| Total                                         |          |       61       |       1       |             |
+| Total                                         |          |       61       |       4       |             |
 
 TOTAL HOURS: 86 Hours
 
