@@ -19,14 +19,14 @@ const handleClickNav = () => {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Welcome to Tooli!</h1>
+      <img className="logo" src="https://res.cloudinary.com/hannahbannan/image/upload/v1597176492/Tooli/Tooli-logo_utgxgj.png" alt="tooli-logo"/>
       {isOpen ? <i class="fas fa-bars" onClick={handleClickNav}></i> :
         <nav className="nav">
           <p onClick={handleClickNav}>X</p>
-          <Link to='/login'>Login</Link>
-          <Link to='register'>Register</Link>
-          <Link to='/sites'>Site Dashboard</Link>
-          <Link to='/tools'>Tool List</Link>
+          <Link to='/sites' onClick={handleClickNav}>Site Dashboard</Link>
+          <Link to='/tools' onClick={handleClickNav}>Tool List</Link>
+          <Link to='/login' onClick={handleClickNav}>Login</Link>
+          <Link to='register' onClick={handleClickNav}>Register</Link>
         </nav>}
       </header>
       <Switch>

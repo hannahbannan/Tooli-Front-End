@@ -1,3 +1,22 @@
+/* General Styling */
+
+h1 {
+  color: #0e3d88;
+  font-family: 'Baloo Thambi 2', serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  color: #0e3d88;
+}
+
+
+.App {
+  background-color: #EDEAE8;
+  height: 100vh;
+}
+
 .App-header {
   display: flex;
   justify-content: space-between;
@@ -17,14 +36,20 @@
   color: white;
   font-family: 'Rubik', sans-serif;
   padding: 20px;
+  padding-right: 40px;
   font-size: 24px;
   text-align: right;
   cursor: pointer;
 }
 
+.nav a:hover, p:hover {
+  color:  #A6D9F7;
+}
+
 .nav p {
   font-size: 30px;
-  padding: 10px;
+  padding: 20px;
+  padding-right: 40px;
 }
 
  i {
@@ -33,4 +58,12 @@
   padding: 20px;
   font-size: 40px;
   cursor: pointer;
+}
+
+i:hover {
+  color: #A6D9F7
+}
+
+.logo {
+  height: 100px;
 }
