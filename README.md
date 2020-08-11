@@ -1,73 +1,4 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
 # Tooli-Front-End
 A full-stack inventory management application. Uses React, Ruby on Rails, and PostsgreSQL
 
@@ -75,7 +6,7 @@ A full-stack inventory management application. Uses React, Ruby on Rails, and Po
 
 LIVE LINKS:
 
-font-end link:
+font-end link: https://tooli.netlify.app/
 
 back-end link: 
 
@@ -110,8 +41,8 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 
 | BackEnd                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
-|  Database structure planning       |    H     |       2        |               |             |
-|  Spin up Rails server              |    H     |       1        |               |             |
+|  Database structure planning       |    H     |       3        |               |             |
+|  Spin up Rails server              |    H     |       1        |      0.5      |             |
 |  Create seed data for Simzee       |    H     |       3        |               |             |
 |  Config schema for tools and sites |    H     |       3        |               |             |
 |  Config log join table             |    H     |       1        |               |             |
@@ -119,11 +50,11 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Research user auth for admin      |    H     |       5        |               |             |
 |  Set up admin/crew routes          |    H     |       4        |               |             |
 |  Deploy server on heroku           |    H     |       2        |               |             |
-|  Total                             |    H     |      25        |               |             |
+|  Total                             |    H     |      26        |      0.5      |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Spin up React app                             |    H     |       1        |               |             |
+| Spin up React app                             |    H     |       1        |     0.5       |             |
 | Navbar & Footer                               |    H     |       2        |               |             |
 | React Router                                  |    H     |       3        |               |             |
 | Login page                                    |    H     |       3        |               |             |
@@ -138,9 +69,9 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
 | CSS/ Styling                                  |    H     |       8        |               |             |
-| Deploy on Netlify/Surge                       |    H     |       2        |               |             |
+| Deploy on Netlify                             |    H     |       2        |     0.5       |             |
 | Site logo                                     |    M     |       2        |               |             |
-| Total                                         |          |       61       |               |             |
+| Total                                         |          |       61       |       1       |             |
 
 TOTAL HOURS: 86 Hours
 
@@ -190,4 +121,4 @@ Back End:
 
 # Bugs & Fixes:
 
->>>>>>> 8f1a8fd630a28b25322a413b3661f16b9c6aa254
+
