@@ -1,1 +1,36 @@
+.App-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #0D2A59;
+  border-radius: 10px;
+  align-items: flex-end;
+  width: 100vw;
+  height: 90vh;
+}
 
+.nav a, p {
+  text-decoration: none;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  padding: 20px;
+  font-size: 24px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.nav p {
+  font-size: 30px;
+  padding: 10px;
+}
+
+ i {
+  color: black;
+  position: right;
+  padding: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
