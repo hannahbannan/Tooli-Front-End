@@ -41,22 +41,22 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 
 | BackEnd                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
-|  Database structure planning       |    H     |       3        |       2       |             |
+|  Database structure planning       |    H     |       3        |       3       |             |
 |  Spin up Rails server              |    H     |       1        |      0.5      |             |
-|  Create seed data for Simzee       |    H     |       3        |               |             |
-|  Config schema for tools and sites |    H     |       3        |               |             |
-|  Config log join table             |    H     |       1        |               |             |
+|  Create seed data                  |    H     |       3        |       1       |             |
+|  Config schema for tools and sites |    H     |       3        |       1       |             |
+|  Config log join table             |    H     |       1        |       1       |             |
 |  Set up CRUD routes                |    H     |       4        |               |             |
 |  Research user auth for admin      |    H     |       5        |       4       |             |
-|  Set up admin/crew routes          |    H     |       4        |       1       |             |
+|  Set up admin/crew routes          |    H     |       4        |       2       |             |
 |  Deploy server on heroku           |    H     |       2        |      0.5      |             |
-|  Total                             |    H     |      26        |       8       |             |
+|  Total                             |    H     |      26        |    12.5       |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Spin up React app                             |    H     |       1        |     0.5       |             |
 | Navbar & Footer                               |    H     |       2        |      1        |             |
-| React Router                                  |    H     |       3        |      1        |             |
+| React Router                                  |    H     |       3        |      1        |      1      |
 | Login page                                    |    H     |       3        |      1        |             |
 | Registration page                             |    H     |       3        |      2        |             |
 | Research login/cookies                        |    H     |       6        |      5        |             |
@@ -69,7 +69,7 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
 | CSS/ Styling                                  |    H     |       8        |      2        |             |
-| Deploy on Netlify                             |    H     |       2        |     0.5       |             |
+| Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
 | Site logo                                     |    M     |       2        |      1        |             |
 | Total                                         |          |       61       |      14       |             |
 
