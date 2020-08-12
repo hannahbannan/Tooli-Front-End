@@ -7,6 +7,7 @@ import SiteDetails from "./components/SiteDetails/SiteDetails";
 import Sites from "./components/Sites/Sites";
 import Tools from "./components/Tools/Tools";
 import Profile from "./components/Profile/Profile";
+import ToolDetails from "./components/ToolDetails/ToolDetails"
 import axios from "axios";
 
 function App() {
@@ -54,11 +55,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Link to='/sites'>
         <img
           className="logo"
           src="https://res.cloudinary.com/hannahbannan/image/upload/v1597176492/Tooli/Tooli-logo_utgxgj.png"
           alt="tooli-logo"
         />
+        </Link>
         {isOpen ? (
           <i className="fas fa-bars" onClick={handleClickNav}></i>
         ) : (
@@ -105,15 +108,19 @@ function App() {
         />
         <Route
           path="/sites/:id"
-          render={(props) => <SiteDetails {...props} isLoggedIn={isLoggedIn} />}
+          render={(props) => <SiteDetails {...props} isLoggedIn={isLoggedIn} user={user} />}
         />
         <Route
           path="/sites"
-          render={(props) => <Sites {...props} isLoggedIn={isLoggedIn} />}
+          render={(props) => <Sites {...props} isLoggedIn={isLoggedIn} user={user} />}
+        />
+        <Route
+          path="/tools/:id"
+          render={(props) => <ToolDetails {...props} isLoggedIn={isLoggedIn} user={user}/>}
         />
         <Route
           path="/tools"
-          render={(props) => <Tools {...props} isLoggedIn={isLoggedIn} />}
+          render={(props) => <Tools {...props} isLoggedIn={isLoggedIn} user={user}/>}
         />
         <Route
           path="/profile"
@@ -121,6 +128,7 @@ function App() {
             <Profile
               {...props}
               isLoggedIn={isLoggedIn}
+              user={user}
               handleLogout={handleLogout}
             />
           )}

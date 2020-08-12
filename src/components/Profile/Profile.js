@@ -1,7 +1,10 @@
 import React from "react";
 import axios from "axios";
 
-const Profile = ({ handleLogout }) => {
+const Profile = ({ handleLogout, user }) => {
+
+
+
   const handleLogoutClick = () => {
     axios
       .delete("http://localhost:3000/logout", { withCredentials: true })

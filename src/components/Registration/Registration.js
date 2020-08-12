@@ -16,7 +16,7 @@ const Registration = (props) => {
 
   const handleAuth = (data) => {
     props.handleLogin(data);
-    props.history.push('/login')
+    props.history.push('/sites')
   }
 
   const handleChange = event => {
@@ -39,9 +39,9 @@ const Registration = (props) => {
     }, 
     { withCredentials: true }
     ).then(response => {
-        if (response.data.status === 'created') {
+      console.log(response.data)
+        if (response.data.user) {
           handleAuth(response.data);
-         
         }
     }).catch(err => {
         console.log("registration error", err)

@@ -9,16 +9,16 @@ const Login = (props) => {
     password: "",
   });
 
-  const handleAuth = (data) => {
-    props.handleLogin(data);
-    props.history.push("/sites");
-  };
-
   const handleChange = (event) => {
     setInput({
       ...input,
       [event.target.name]: event.target.value,
     });
+  };
+
+  const handleAuth = (data) => {
+    props.handleLogin(data);
+    props.history.push("/sites");
   };
 
   const handleSubmit = (event) => {
@@ -34,6 +34,7 @@ const Login = (props) => {
         { withCredentials: true }
       )
       .then((response) => {
+          console.log(response.data)
         if (response.data.logged_in) {
           handleAuth(response.data);
         }
