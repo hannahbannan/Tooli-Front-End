@@ -41,37 +41,37 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 
 | BackEnd                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
-|  Database structure planning       |    H     |       3        |               |             |
+|  Database structure planning       |    H     |       3        |       2       |             |
 |  Spin up Rails server              |    H     |       1        |      0.5      |             |
 |  Create seed data for Simzee       |    H     |       3        |               |             |
 |  Config schema for tools and sites |    H     |       3        |               |             |
 |  Config log join table             |    H     |       1        |               |             |
 |  Set up CRUD routes                |    H     |       4        |               |             |
-|  Research user auth for admin      |    H     |       5        |      1.5      |             |
-|  Set up admin/crew routes          |    H     |       4        |               |             |
+|  Research user auth for admin      |    H     |       5        |       4       |             |
+|  Set up admin/crew routes          |    H     |       4        |       1       |             |
 |  Deploy server on heroku           |    H     |       2        |      0.5      |             |
-|  Total                             |    H     |      26        |      2.5      |             |
+|  Total                             |    H     |      26        |       8       |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Spin up React app                             |    H     |       1        |     0.5       |             |
-| Navbar & Footer                               |    H     |       2        |     0.5       |             |
+| Navbar & Footer                               |    H     |       2        |      1        |             |
 | React Router                                  |    H     |       3        |      1        |             |
-| Login page                                    |    H     |       3        |               |             |
-| Research login/cookies                        |    H     |       6        |     1.5        |             |
+| Login page                                    |    H     |       3        |      1        |             |
+| Registration page                             |    H     |       3        |      2        |             |
+| Research login/cookies                        |    H     |       6        |      5        |             |
 | Sites list/dashboard                          |    H     |       4        |               |             |
 | Google Maps API research                      |    H     |       4        |               |             |
 | Implement google maps API for dashboard       |    H     |       3        |               |             |
-| Create account page                           |    H     |       3        |               |             |
 | Site details page w/ tools                    |    H     |       4        |               |             |
 | Tool searchbar.                               |    M     |       4        |               |             |
 | Tool details page                             |    L     |       3        |               |             |
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
-| CSS/ Styling                                  |    H     |       8        |               |             |
+| CSS/ Styling                                  |    H     |       8        |      2        |             |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |             |
-| Site logo                                     |    M     |       2        |               |             |
-| Total                                         |          |       61       |       4       |             |
+| Site logo                                     |    M     |       2        |      1        |             |
+| Total                                         |          |       61       |      14       |             |
 
 TOTAL HOURS: 86 Hours
 
@@ -91,8 +91,8 @@ TOTAL HOURS: 86 Hours
 | ---------------------- | :----------------------------------------------------------------------: |
 | App                    |                      Sets up app with React Router                       |
 | Nav                    |       Nav links to sites, profile, tool search, crew members             |
-| Login form             |                          Crew login page                                 |
-| Admin login form       |                        Admin login page                                  |
+| Login form             |                      Crew & admin login page                             |
+| Registration form      |                          Create a profile                                |
 | Site map               |            Load sites on map using Google Maps API                       |
 | Sites page             |                    List of active construction sites                     |
 | Site details           |                   See site details plus tools at that site               |
@@ -115,6 +115,7 @@ Back End:
 
 - Cors
 - Morgan
+- bCrypt
 
 # Code Snippet
 
