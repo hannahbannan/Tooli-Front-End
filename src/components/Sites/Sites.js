@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Sites.css";
-import Map from "../Map/Map";
+// import Map from "../Map/Map";
+import {Map, GoogleApiWrapper} from 'google-maps-react';
+import MapContainer from "../Map/MapContainer"
 
 
 const Sites = (props) => {
@@ -20,10 +22,10 @@ const Sites = (props) => {
     makeAPICall();
   }, []);
 
-  const mapStyles = {
-    width: '100%',
-    height: '100%'
-  };
+  // const mapStyles = {
+  //   width: '100%',
+  //   height: '100%'
+  // };
 
   const location = {
     address: '12904 Palms Blvd, Los Angeles, CA 90066',
@@ -43,7 +45,8 @@ const Sites = (props) => {
 
   return (
     <div>
-      <Map location={location}/>
+      <MapContainer />
+      <br/>
       <h1>Sites</h1>
       <div className="list">{sitesArr}</div>
     </div>
