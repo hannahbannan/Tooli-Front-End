@@ -3,3 +3,18 @@
     justify-content: space-around;
     padding: 10px;
 }
+
+.center {
+    margin: 0 auto;
+}
+
+.login-redirect {
+    width: 80vw;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

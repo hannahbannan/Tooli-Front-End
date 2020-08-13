@@ -7,7 +7,6 @@ const MapContainer = ({ siteList, google }) => {
     console.log(el.name);
   };
 
-console.log(siteList)
   const displayMarkers = siteList.map((el) => {
     return (
       <Marker

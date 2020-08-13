@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./Profile.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Profile = ({ handleLogout, user }) => {
   const handleLogoutClick = () => {
@@ -14,8 +14,6 @@ const Profile = ({ handleLogout, user }) => {
         console.log("logout error", err);
       });
   };
-
-  console.log(user);
 
   if (user) {
     return (
@@ -32,14 +30,21 @@ const Profile = ({ handleLogout, user }) => {
             <h3>Account type: Crew</h3>
           )}
           <div className="multi-button">
-            <Link to={`/profile/${user.id}`}><button>Update Profile</button></Link>
+            <Link to={`/profile/${user.id}`}>
+              <button>Update Profile</button>
+            </Link>
             <button onClick={() => handleLogoutClick}>Logout</button>
           </div>
         </div>
       </div>
     );
   } else {
-    return <p>Loading your profile...</p>;
+    return (
+      <div className="login-redirect">
+        <h2>Oops! Looks like you're not logged in.</h2>
+        <Link to='/login'><button className="center">Log In</button></Link>
+      </div>
+    );
   }
 };
 

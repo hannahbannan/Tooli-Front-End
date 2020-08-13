@@ -112,7 +112,7 @@ function App() {
           render={(props) => <SiteDetails {...props} isLoggedIn={isLoggedIn} user={user} />}
         />
         <Route
-          path="/sites"
+          exact path="/sites"
           render={(props) => <Sites {...props} isLoggedIn={isLoggedIn} user={user} />}
         />
         <Route
@@ -120,7 +120,7 @@ function App() {
           render={(props) => <ToolDetails {...props} isLoggedIn={isLoggedIn} user={user}/>}
         />
         <Route
-          path="/tools"
+          exact path="/tools"
           render={(props) => <Tools {...props} isLoggedIn={isLoggedIn} user={user}/>}
         />
         <Route
@@ -135,7 +135,7 @@ function App() {
           )}
         />
         <Route
-          path="/profile"
+          exact path="/profile"
           render={(props) => (
             <Profile
               {...props}
