@@ -43,9 +43,10 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
 |  Database structure planning       |    H     |       3        |       3       |             |
 |  Spin up Rails server              |    H     |       1        |      0.5      |             |
-|  Create seed data                  |    H     |       3        |       1       |             |
+|  Create seed data                  |    H     |       3        |      1.5      |     1.5     |
 |  Config schema for tools and sites |    H     |       3        |       1       |             |
 |  Config log join table             |    H     |       1        |       1       |             |
+|  Create own API                    |    H     |                |       3       |             |
 |  Set up CRUD routes                |    H     |       4        |               |             |
 |  Research user auth for admin      |    H     |       5        |       4       |             |
 |  Set up admin/crew routes          |    H     |       4        |       2       |             |
@@ -60,18 +61,18 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | Login page                                    |    H     |       3        |      1        |             |
 | Registration page                             |    H     |       3        |      2        |             |
 | Research login/cookies                        |    H     |       6        |      5        |             |
-| Sites list/dashboard                          |    H     |       4        |               |             |
+| Sites list/dashboard                          |    H     |       4        |      1        |             |
 | Google Maps API research                      |    H     |       4        |               |             |
 | Implement google maps API for dashboard       |    H     |       3        |               |             |
-| Site details page w/ tools                    |    H     |       4        |               |             |
-| Tool searchbar.                               |    M     |       4        |               |             |
-| Tool details page                             |    L     |       3        |               |             |
+| Site details page w/ tools                    |    H     |       4        |      1        |             |
+| Tool searchbar                                |    M     |       4        |               |             |
+| Tool details page w/ update form              |    H     |       5        |      1        |             |
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
 | CSS/ Styling                                  |    H     |       8        |      2        |             |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
 | Site logo                                     |    M     |       2        |      1        |             |
-| Total                                         |          |       61       |      14       |             |
+| Total                                         |          |       61       |      17       |             |
 
 TOTAL HOURS: 86 Hours
 
@@ -116,6 +117,7 @@ Back End:
 - Cors
 - Morgan
 - bCrypt
+- Grape
 
 # Code Snippet
 
