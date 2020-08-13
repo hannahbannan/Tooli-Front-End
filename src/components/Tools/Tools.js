@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Tools.css"
 
 const Tools = (props) => {
   const [toolList, setToolList] = useState([]);
@@ -8,7 +9,7 @@ const Tools = (props) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const res = await axios("http://localhost:3000/api/v1/tools");
+        const res = await axios("http://localhost:3000/tools");
         setToolList(res.data);
       } catch (err) {
         console.error(err);
@@ -17,13 +18,13 @@ const Tools = (props) => {
     makeAPICall();
   }, []);
 
-  console.log(toolList);
 
   const toolsArr = toolList.map((el) => {
     return (
       <Link to={`/tools/${el.id}`}>
-        <div className="tool-listing"></div>
-        <h2>{el.name}</h2>
+        <div className="listing">
+        <h3>{el.name}</h3>
+        </div>
       </Link>
     );
   });
@@ -32,7 +33,7 @@ const Tools = (props) => {
     return (
       <div>
         <h1>Tools</h1>
-        {toolsArr}
+        <div className="list">{toolsArr}</div>
       </div>
     );
   } else {

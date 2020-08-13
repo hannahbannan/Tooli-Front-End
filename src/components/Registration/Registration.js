@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Registration.css"
 
 const Registration = (props) => {
-  console.log(props.isLoggedIn)
 
   const [input, setInput] = useState({
     firstname: "",
@@ -53,7 +53,7 @@ const Registration = (props) => {
 
   return (
     <div>
-      <h1>Register</h1>
+      <h1>Register for Tooli</h1>
       <form onSubmit={handleSubmit} className="register-form">
         <label>First name</label>
         <input

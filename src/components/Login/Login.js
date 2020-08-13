@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Login.css"
 
 const Login = (props) => {
-  console.log(props.isLoggedIn);
+  console.log("logged in", props.isLoggedIn);
 
   const [input, setInput] = useState({
     email: "",

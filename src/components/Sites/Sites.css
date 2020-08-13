@@ -1,0 +1,36 @@
+.list {
+    background-color: white;
+    border-radius: 10px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.listing h3:hover {
+    color: gray;
+}
+
+.listing {
+    padding: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid #FFFD77;
+}
+
+.listing h3 {
+    color: #312F2F;
+}
+
+
+
+.map {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    color: yellow;
+    padding: 20px;
+    margin-bottom: 40px;
+}

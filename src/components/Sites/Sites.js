@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./Sites.css"
 
 const Sites = (props) => {
   const [siteList, setSiteList] = useState([]);
@@ -8,7 +9,7 @@ const Sites = (props) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const res = await axios("http://localhost:3000/api/v1/sites");
+        const res = await axios("http://localhost:3000/sites");
         setSiteList(res.data);
       } catch (err) {
         console.error(err);
@@ -20,7 +21,7 @@ const Sites = (props) => {
   const sitesArr = siteList.map((el) => {
     return (
       <Link to={`/sites/${el.id}`}>
-        <div className="site-listing">
+        <div className="listing">
           <h3>{el.name}</h3>
         </div>
       </Link>
@@ -29,8 +30,9 @@ const Sites = (props) => {
 
   return (
     <div>
+      <div className="map">Map will go here!</div>
       <h1>Sites</h1>
-      {sitesArr}
+      <div className="list">{sitesArr}</div>
     </div>
   );
 };
