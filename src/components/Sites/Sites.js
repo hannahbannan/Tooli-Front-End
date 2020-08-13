@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Sites.css";
-// import Map from "../Map/Map";
-import {Map, GoogleApiWrapper} from 'google-maps-react';
 import MapContainer from "../Map/MapContainer"
 
 
@@ -22,22 +20,14 @@ const Sites = (props) => {
     makeAPICall();
   }, []);
 
-  // const mapStyles = {
-  //   width: '100%',
-  //   height: '100%'
-  // };
 
-  const location = {
-    address: '12904 Palms Blvd, Los Angeles, CA 90066',
-    lat: '34.00617',
-    lng: '-118.44636'
-  }
 
   const sitesArr = siteList.map((el) => {
     return (
       <Link to={`/sites/${el.id}`}>
         <div className="listing">
           <h3>{el.name}</h3>
+          <h4>{el.address}</h4>
         </div>
       </Link>
     );
@@ -45,7 +35,7 @@ const Sites = (props) => {
 
   return (
     <div>
-      <MapContainer />
+      <MapContainer siteList={siteList}/>
       <br/>
       <h1>Sites</h1>
       <div className="list">{sitesArr}</div>

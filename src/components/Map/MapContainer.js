@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import "./MapContainer.css";
 
-const MapContainer = (props) => {
-  const sites = [
-    { lat: 34.006, lng: -118.446 },
-    { lat: 34.066, lng: -118.45 },
-    { lat: 34.024, lng: -118.5036 },
-    { lat: 34.0189, lng: -118.501 },
-    { lat: 34.0456, lng: -118.4478 },
-  ];
+const MapContainer = ({ siteList, google }) => {
+  const sayHi = (el) => {
+    console.log(el.name);
+  };
 
-  const displayMarkers = sites.map((el) => {
+console.log(siteList)
+  const displayMarkers = siteList.map((el) => {
     return (
       <Marker
+        onMouseover={sayHi}
+        name={el.name}
         key={el.index}
         position={{
           lat: el.lat,
-          lng: el.lng,
+          lng: el.lng
         }}
       />
     );
@@ -25,15 +24,16 @@ const MapContainer = (props) => {
 
   const mapStyles = {
     width: "50vw",
-    height: "50vh",
+    height: "40vh"
   };
+
   return (
     <div className="mappy">
       <Map
-        google={props.google}
+        google={google}
         zoom={11}
         style={mapStyles}
-        initialCenter={{ lat: 34.006, lng: -118.446 }}
+        initialCenter={{ lat: 34.0378, lng: -118.454 }}
       >
         {displayMarkers}
       </Map>
