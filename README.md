@@ -108,14 +108,12 @@ TOTAL HOURS: 86 Hours
 Front End:
 
 - Axios
-- React-Media
-- Material-UI
+- React Router
 - Google Maps API
 
 Back End:
 
-- Cors
-- Morgan
+- Rack-cors
 - bCrypt
 - Grape
 
