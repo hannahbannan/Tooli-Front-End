@@ -16,6 +16,10 @@ front-end link: https://github.com/hannahbannan/Tooli-Front-End
 
 back-end link: https://github.com/hannahbannan/Tooli-Back-End
 
+API LINKS:
+
+Google Maps API Key: AIzaSyAG8qPjaB7bbE9JEKzfbIWf_2FSwPAxX3E
+
 ## Project Description
 
 An inventory management application that tracks tools and construction equipment across a company's construction sites. There will be two levels of users, admin and crew. I am building this app for Simzee Construction & Development, after one of their project managers (also my boyfriend) mentioned that they are always losing track of where their tools and equipment are.
@@ -46,33 +50,34 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Create seed data                  |    H     |       3        |      1.5      |     1.5     |
 |  Config schema for tools and sites |    H     |       3        |       1       |             |
 |  Config log join table             |    H     |       1        |       1       |             |
-|  Create own API                    |    H     |                |       3       |             |
-|  Set up CRUD routes                |    H     |       4        |               |             |
+|  Create own API (then not use)     |    H     |                |       4       |      4      |
+|  Set up CRUD routes                |    H     |       4        |       2       |             |
 |  Research user auth for admin      |    H     |       5        |       4       |             |
 |  Set up admin/crew routes          |    H     |       4        |       2       |             |
 |  Deploy server on heroku           |    H     |       2        |      0.5      |             |
-|  Total                             |    H     |      26        |    12.5       |             |
+|  Total                             |    H     |      26        |    19.5       |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Spin up React app                             |    H     |       1        |     0.5       |             |
 | Navbar & Footer                               |    H     |       2        |      1        |             |
 | React Router                                  |    H     |       3        |      1        |      1      |
-| Login page                                    |    H     |       3        |      1        |             |
+| Login page                                    |    H     |       3        |      2        |             |
 | Registration page                             |    H     |       3        |      2        |             |
+| Profile page and update profile               |    H     |                |      2        |      2      |
 | Research login/cookies                        |    H     |       6        |      5        |             |
-| Sites list/dashboard                          |    H     |       4        |      1        |             |
+| Sites list/dashboard                          |    H     |       4        |      2        |             |
 | Google Maps API research                      |    H     |       4        |               |             |
 | Implement google maps API for dashboard       |    H     |       3        |               |             |
-| Site details page w/ tools                    |    H     |       4        |      1        |             |
+| Site details page w/ tools                    |    H     |       4        |      2        |             |
 | Tool searchbar                                |    M     |       4        |               |             |
-| Tool details page w/ update form              |    H     |       5        |      1        |             |
+| Tool details page w/ update form              |    H     |       5        |      2        |             |
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
 | CSS/ Styling                                  |    H     |       8        |      2        |             |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
 | Site logo                                     |    M     |       2        |      1        |             |
-| Total                                         |          |       61       |      17       |             |
+| Total                                         |          |       61       |      23       |             |
 
 TOTAL HOURS: 86 Hours
 
@@ -115,7 +120,7 @@ Back End:
 
 - Rack-cors
 - bCrypt
-- Grape
+- Grape (ended up not using)
 
 # Code Snippet
 
