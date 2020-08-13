@@ -7,7 +7,8 @@ import SiteDetails from "./components/SiteDetails/SiteDetails";
 import Sites from "./components/Sites/Sites";
 import Tools from "./components/Tools/Tools";
 import Profile from "./components/Profile/Profile";
-import ToolDetails from "./components/ToolDetails/ToolDetails"
+import ToolDetails from "./components/ToolDetails/ToolDetails";
+import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import axios from "axios";
 
 function App() {
@@ -121,6 +122,17 @@ function App() {
         <Route
           path="/tools"
           render={(props) => <Tools {...props} isLoggedIn={isLoggedIn} user={user}/>}
+        />
+        <Route
+          path="/profile/:id"
+          render={(props) => (
+            <UpdateProfile
+              {...props}
+              isLoggedIn={isLoggedIn}
+              user={user}
+              handleLogout={handleLogout}
+            />
+          )}
         />
         <Route
           path="/profile"

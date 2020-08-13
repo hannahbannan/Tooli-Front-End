@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Map from "../Map/Map"
 
 const SiteDetails = (props) => {
   const [site, setSite] = useState(null);
@@ -20,6 +21,12 @@ const SiteDetails = (props) => {
     makeAPICall();
   }, []);
 
+  const location = {
+    address: '12904 Palms Blvd, Los Angeles, CA 90066',
+    lat: '34.00617',
+    lng: '-118.44636'
+  }
+
   if (site) {
     console.log(site.tools);
     let tools = site.tools;
@@ -36,7 +43,7 @@ const SiteDetails = (props) => {
     return (
       <div>
         <h1>{site.name}</h1>
-        <div className="map">Map will go here!</div>
+        <Map location={location}/>
         <div className="details">
           <h2>{site.address}</h2>
           <h3>Project Manager: {site.manager}</h3>

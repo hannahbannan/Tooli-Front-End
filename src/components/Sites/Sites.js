@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./Sites.css"
+import "./Sites.css";
+import Map from "../Map/Map";
+
 
 const Sites = (props) => {
   const [siteList, setSiteList] = useState([]);
@@ -18,6 +20,17 @@ const Sites = (props) => {
     makeAPICall();
   }, []);
 
+  const mapStyles = {
+    width: '100%',
+    height: '100%'
+  };
+
+  const location = {
+    address: '12904 Palms Blvd, Los Angeles, CA 90066',
+    lat: '34.00617',
+    lng: '-118.44636'
+  }
+
   const sitesArr = siteList.map((el) => {
     return (
       <Link to={`/sites/${el.id}`}>
@@ -30,7 +43,7 @@ const Sites = (props) => {
 
   return (
     <div>
-      <div className="map">Map will go here!</div>
+      <Map location={location}/>
       <h1>Sites</h1>
       <div className="list">{sitesArr}</div>
     </div>
