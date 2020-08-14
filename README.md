@@ -45,39 +45,39 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 
 | BackEnd                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
-|  Database structure planning       |    H     |       3        |       3       |             |
-|  Spin up Rails server              |    H     |       1        |      0.5      |             |
+|  Database structure planning       |    H     |       3        |       3       |      3      |
+|  Spin up Rails server              |    H     |       1        |      0.5      |     0.5     |
 |  Create seed data                  |    H     |       3        |      1.5      |     1.5     |
-|  Config schema for tools and sites |    H     |       3        |       1       |             |
+|  Config schema for tools and sites |    H     |       3        |       1       |      1      |
 |  Config log join table             |    H     |       1        |       1       |             |
 |  Create own API (then not use)     |    H     |                |       4       |      4      |
 |  Set up CRUD routes                |    H     |       4        |       2       |             |
 |  Research user auth for admin      |    H     |       5        |       4       |             |
-|  Set up admin/crew routes          |    H     |       4        |       2       |             |
+|  Set up admin/crew routes          |    H     |       4        |       2       |      2      |
 |  Deploy server on heroku           |    H     |       2        |      0.5      |             |
 |  Total                             |    H     |      26        |    19.5       |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Spin up React app                             |    H     |       1        |     0.5       |             |
-| Navbar & Footer                               |    H     |       2        |      1        |             |
+| Navbar & Footer                               |    H     |       2        |      1        |      1      |
 | React Router                                  |    H     |       3        |      1        |      1      |
 | Login page                                    |    H     |       3        |      2        |      2      |
-| Registration page                             |    H     |       3        |      2        |             |
-| Profile page and update profile               |    H     |                |      2        |      2      |
-| Research login/cookies                        |    H     |       6        |      5        |             |
-| Sites list/dashboard                          |    H     |       4        |      3        |             |
-| Google Maps API research                      |    H     |       4        |      2        |      2      |
-| Implement google maps API for dashboard       |    H     |       3        |      2        |             |
+| Registration page                             |    H     |       3        |      2        |      2      |
+| Profile page and update profile               |    H     |                |      3        |      3      |
+| Research login/cookies                        |    H     |       6        |      5        |      5      |
+| Sites list/dashboard                          |    H     |       4        |      3        |      3      |
+| Google Maps API research                      |    H     |       4        |      3        |      3      |
+| Implement google maps API for dashboard       |    H     |       3        |      3        |      3      |
 | Site details page w/ tools                    |    H     |       4        |      2        |      2      |
 | Tool searchbar                                |    M     |       4        |               |             |
-| Tool details page w/ update form              |    H     |       5        |      3        |             |
+| Tool details page w/ update form              |    H     |       5        |      4        |      4      |
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
-| CSS/ Styling                                  |    H     |       8        |      5        |             |
+| CSS/ Styling                                  |    H     |       8        |      6        |             |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
-| Site logo                                     |    M     |       2        |      1        |             |
-| Total                                         |          |       61       |      29       |             |
+| Site logo                                     |    M     |       2        |     1.5       |             |
+| Total                                         |          |       61       |    37.5       |             |
 
 TOTAL HOURS: 86 Hours
 
@@ -88,8 +88,8 @@ TOTAL HOURS: 86 Hours
 |  Location services to track tools  |    M     |       6        |               |             |
 |  Replenish tools: keep tally       |    L     |       6        |               |             |
 |  Add in site schedules             |    L     |       4        |               |             |
-|  About Simzee page                 |    L     |       3        |               |             |
-| Total                              |          |       19       |               |             |
+|  About Simzee page                 |    L     |       3        |       1       |     1       |
+| Total                              |          |       19       |       1       |             |
 
 # Components
 
