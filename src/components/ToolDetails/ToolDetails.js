@@ -25,6 +25,7 @@ const ToolDetails = (props) => {
     makeAPICall();
   }, []);
 
+
   if (tool) {
     let activeSite = tool.sites[tool.sites.length-1];
     let activeLog = tool.logs[tool.logs.length-1];
@@ -48,8 +49,6 @@ const ToolDetails = (props) => {
 
     const openUpdateBox = () => {
       setUpdateBox(true);
-      console.log("ready to update!");
-      console.log(updateBox);
     };
 
     return (

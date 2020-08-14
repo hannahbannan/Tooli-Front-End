@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const ToolUpdate = ({ tool, user }) => {
- 
-
   const [siteId, setSiteId] = useState({ value: null });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [siteList, setSiteList] = useState([]);
+
+  useEffect(() => {
+    const makeAPICall = async () => {
+      try {
+        const response = await axios("http://localhost:3000/sites");
+        setSiteList(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    makeAPICall();
+  }, []);
+
+  const optionArr = siteList.map((el) => {
+    return <option value={el.id}>{el.name}</option>;
+  });
 
   const handleChange = (event) => {
     setSiteId({ value: event.target.value });
@@ -22,7 +37,7 @@ const ToolUpdate = ({ tool, user }) => {
         },
       })
       .then((response) => {
-        console.log("created log")
+        console.log("created log");
       })
       .catch((err) => {
         console.error(err);
@@ -36,13 +51,7 @@ const ToolUpdate = ({ tool, user }) => {
       <div>
         {isSubmitted ? null : (
           <form onSubmit={handleSubmit} onChange={handleChange}>
-            <select value={siteId}>
-              <option value="5">Rex Bakery</option>
-              <option value="2">Strathmore Towers</option>
-              <option value="1">Beethoven Market</option>
-              <option value="3">El Cortez Apartments</option>
-              <option value="4">The Huntley Hotel</option>
-            </select>
+            <select value={siteId}>{optionArr}</select>
             <br />
             <button>Update location</button>
           </form>
