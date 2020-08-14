@@ -4,6 +4,7 @@ import "./ToolDetails.css";
 import { Link } from "react-router-dom";
 import SingleMap from "../Map/SingleMap/SingleMap";
 import ToolUpdate from "./ToolUpdate/ToolUpdate";
+import AdminToolUpdate from "./AdminToolUpdate/AdminToolUpdate";
 
 const ToolDetails = (props) => {
   const [tool, setTool] = useState(null);
@@ -51,6 +52,7 @@ const ToolDetails = (props) => {
       setUpdateBox(true);
     };
 
+
     return (
       <div>
         <h1>{tool.name}</h1>
@@ -73,6 +75,7 @@ const ToolDetails = (props) => {
             <h3>Back to All Tools</h3>
           </Link>
           <SingleMap lat={activeSite.lat} lng={activeSite.lng} />
+          {props.user.isAdmin ? <AdminToolUpdate/> : null}
         </div>
       </div>
     );

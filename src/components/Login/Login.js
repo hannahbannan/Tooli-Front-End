@@ -39,7 +39,7 @@ const Login = (props) => {
         console.log(response.data);
         if (response.data.logged_in) {
           handleAuth(response.data);
-        }
+        } 
       })
       .catch((err) => {
         console.log("registration error", err);
