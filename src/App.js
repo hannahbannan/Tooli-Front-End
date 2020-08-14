@@ -9,6 +9,7 @@ import Tools from "./components/Tools/Tools";
 import Profile from "./components/Profile/Profile";
 import ToolDetails from "./components/ToolDetails/ToolDetails";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
+import About from "./components/About/About"
 import axios from "axios";
 
 function App() {
@@ -80,8 +81,11 @@ function App() {
             <Link to="/login" onClick={handleClickNav}>
               Login
             </Link>
-            <Link to="register" onClick={handleClickNav}>
+            <Link to="/register" onClick={handleClickNav}>
               Register
+            </Link>
+            <Link to="/about" onClick={handleClickNav}>
+              About Tooli
             </Link>
           </nav>
         )}
@@ -130,7 +134,6 @@ function App() {
               {...props}
               isLoggedIn={isLoggedIn}
               user={user}
-              handleLogout={handleLogout}
             />
           )}
         />
@@ -145,6 +148,7 @@ function App() {
             />
           )}
         />
+        <Route path='/about' component={About}/>
       </Switch>
     </div>
   );

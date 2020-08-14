@@ -3,11 +3,13 @@ import axios from "axios";
 import "./ToolDetails.css";
 import { Link } from "react-router-dom";
 import SingleMap from "../Map/SingleMap/SingleMap";
+import ToolUpdate from "./ToolUpdate/ToolUpdate";
 
 const ToolDetails = (props) => {
   const [tool, setTool] = useState(null);
   const [loggerF, setLoggerF] = useState(null);
   const [loggerL, setLoggerL] = useState(null);
+  const [updateBox, setUpdateBox] = useState(false);
 
   useEffect(() => {
     const makeAPICall = async () => {
@@ -24,16 +26,15 @@ const ToolDetails = (props) => {
   }, []);
 
   if (tool) {
-    let activeSite = tool.sites[0];
-    let activeLog = tool.logs[0];
-    console.log(activeLog);
+    let activeSite = tool.sites[tool.sites.length-1];
+    let activeLog = tool.logs[tool.logs.length-1];
+  
 
     const findLogger = async () => {
       try {
         const res = await axios(
           `http://localhost:3000/users/${activeLog.user_id}`
         );
-        console.log(res.data);
         setLoggerF(res.data.firstname);
         setLoggerL(res.data.lastname);
       } catch (err) {
@@ -45,6 +46,12 @@ const ToolDetails = (props) => {
       findLogger();
     }
 
+    const openUpdateBox = () => {
+      setUpdateBox(true);
+      console.log("ready to update!");
+      console.log(updateBox);
+    };
+
     return (
       <div>
         <h1>{tool.name}</h1>
@@ -55,7 +62,8 @@ const ToolDetails = (props) => {
             Location:{" "}
             <Link to={`/sites/${activeSite.id}`}>{activeSite.name}</Link>
           </h3>
-
+          <button onClick={openUpdateBox}>Update tool location</button>
+          {updateBox ? <ToolUpdate tool={tool} user={props.user} /> : null}
           <h3>
             Last logged by: {loggerF} {loggerL}
           </h3>

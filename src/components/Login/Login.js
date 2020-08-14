@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Login.css"
+import "./Login.css";
+import {Link} from "react-router-dom";
 
 const Login = (props) => {
   console.log("logged in", props.isLoggedIn);
@@ -35,7 +36,7 @@ const Login = (props) => {
         { withCredentials: true }
       )
       .then((response) => {
-          console.log(response.data)
+        console.log(response.data);
         if (response.data.logged_in) {
           handleAuth(response.data);
         }
@@ -46,29 +47,40 @@ const Login = (props) => {
     event.preventDefault();
   };
 
-  return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit} className="register-form">
-        <label>Email</label>
-        <input
-          type="text"
-          value={input.email}
-          name="email"
-          onChange={handleChange}
-        />
-        <br />
-        <label>Password</label>
-        <input
-          type="password"
-          value={input.password}
-          name="password"
-          onChange={handleChange}
-        />
-        <br />
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
+  if (props.isLoggedIn) {
+    return (
+      <div>
+        <h3> Looks like you're already logged in!</h3>
+        <Link to="/profile">
+          <h2>Your profile</h2>
+        </Link>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h1>Login</h1>
+        <form onSubmit={handleSubmit} className="register-form">
+          <label>Email</label>
+          <input
+            type="text"
+            value={input.email}
+            name="email"
+            onChange={handleChange}
+          />
+          <br />
+          <label>Password</label>
+          <input
+            type="password"
+            value={input.password}
+            name="password"
+            onChange={handleChange}
+          />
+          <br />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    );
+  }
 };
 export default Login;
