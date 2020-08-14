@@ -52,10 +52,10 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Config log join table             |    H     |       1        |       1       |             |
 |  Create own API (then not use)     |    H     |                |       4       |      4      |
 |  Set up CRUD routes                |    H     |       4        |       2       |             |
-|  Research user auth for admin      |    H     |       5        |       4       |             |
+|  Research user auth for admin      |    H     |       5        |       4       |      4      |
 |  Set up admin/crew routes          |    H     |       4        |       2       |      2      |
-|  Deploy server on heroku           |    H     |       2        |      0.5      |             |
-|  Total                             |    H     |      26        |    19.5       |             |
+|  Deploy server on heroku           |    H     |       2        |       3       |             |
+|  Total                             |    H     |      26        |      22       |             |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -70,7 +70,7 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | Google Maps API research                      |    H     |       4        |      3        |      3      |
 | Implement google maps API for dashboard       |    H     |       3        |      3        |      3      |
 | Site details page w/ tools                    |    H     |       4        |      2        |      2      |
-| Tool searchbar                                |    M     |       4        |               |             |
+| Tool searchbar                                |    L     |       4        |               |             |
 | Tool details page w/ update form              |    H     |       5        |      4        |      4      |
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
