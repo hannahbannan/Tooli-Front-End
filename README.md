@@ -62,22 +62,22 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | Spin up React app                             |    H     |       1        |     0.5       |             |
 | Navbar & Footer                               |    H     |       2        |      1        |             |
 | React Router                                  |    H     |       3        |      1        |      1      |
-| Login page                                    |    H     |       3        |      2        |             |
+| Login page                                    |    H     |       3        |      2        |      2      |
 | Registration page                             |    H     |       3        |      2        |             |
 | Profile page and update profile               |    H     |                |      2        |      2      |
 | Research login/cookies                        |    H     |       6        |      5        |             |
-| Sites list/dashboard                          |    H     |       4        |      2        |             |
-| Google Maps API research                      |    H     |       4        |               |             |
-| Implement google maps API for dashboard       |    H     |       3        |               |             |
-| Site details page w/ tools                    |    H     |       4        |      2        |             |
+| Sites list/dashboard                          |    H     |       4        |      3        |             |
+| Google Maps API research                      |    H     |       4        |      2        |      2      |
+| Implement google maps API for dashboard       |    H     |       3        |      2        |             |
+| Site details page w/ tools                    |    H     |       4        |      2        |      2      |
 | Tool searchbar                                |    M     |       4        |               |             |
-| Tool details page w/ update form              |    H     |       5        |      2        |             |
+| Tool details page w/ update form              |    H     |       5        |      3        |             |
 | Cookies - attach user to tool?                |    M     |       3        |               |             |
 | Responsive Design                             |    H     |       6        |               |             |
-| CSS/ Styling                                  |    H     |       8        |      2        |             |
+| CSS/ Styling                                  |    H     |       8        |      5        |             |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
 | Site logo                                     |    M     |       2        |      1        |             |
-| Total                                         |          |       61       |      23       |             |
+| Total                                         |          |       61       |      29       |             |
 
 TOTAL HOURS: 86 Hours
 
