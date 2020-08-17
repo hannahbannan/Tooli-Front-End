@@ -76,7 +76,7 @@ const ToolDetails = (props) => {
             <h3>Back to All Tools</h3>
           </Link>
           <SingleMap lat={activeSite.lat} lng={activeSite.lng} />
-          {props.user.isAdmin ? <AdminToolUpdate/> : null}
+          {props.user && props.user.isAdmin ? <AdminToolUpdate/> : null}
         </div>
       </div>
     );
