@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Tools.css";
 import apiUrl from "../../apiConfig";
+import AddTool from "../AddTool/AddTool";
 
 const Tools = (props) => {
   const [toolList, setToolList] = useState([]);
@@ -19,12 +20,11 @@ const Tools = (props) => {
     makeAPICall();
   }, []);
 
-
   const toolsArr = toolList.map((el) => {
     return (
       <Link to={`/tools/${el.id}`}>
         <div className="listing">
-        <h3>{el.name}</h3>
+          <h3>{el.name}</h3>
         </div>
       </Link>
     );
@@ -35,6 +35,7 @@ const Tools = (props) => {
       <div>
         <h1>Tools</h1>
         <div className="list">{toolsArr}</div>
+        {props.user && props.user.isAdmin ? <AddTool user={props.user}/> : null}
       </div>
     );
   } else {

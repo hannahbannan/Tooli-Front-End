@@ -29,9 +29,37 @@ const ToolDetails = (props) => {
 
 
   if (tool) {
+
+
+    console.log(tool)
+    if (!tool.logs[0]) {
+      const openUpdateBox = () => {
+        setUpdateBox(true);
+      };
+  return (
+  <div>
+          <h1>{tool.name}</h1>
+          <div className="details">
+            <img src={tool.image} alt="{tool.name}" className="tool-img" />
+            <button onClick={openUpdateBox}>Update tool location</button>
+            {updateBox ? <ToolUpdate tool={tool} user={props.user} /> : null}
+            <h3>
+              Last logged by: {loggerF} {loggerL}
+            </h3>
+            <h3>Make: {tool.make}</h3>
+            <h3>Model: {tool.model}</h3>
+            <h3>Serial Number: {tool.serial}</h3>
+            <Link to="/tools">
+              <h3>Back to All Tools</h3>
+            </Link>
+            {props.user && props.user.isAdmin ? <AdminToolUpdate/> : null}
+          </div>
+        </div>)
+    }
+    else {
     let activeSite = tool.sites[tool.sites.length-1];
     let activeLog = tool.logs[tool.logs.length-1];
-  
+
 
     const findLogger = async () => {
       try {
@@ -80,7 +108,7 @@ const ToolDetails = (props) => {
         </div>
       </div>
     );
-  } else {
+  }} else {
     return <p>Loading tool details...</p>;
   }
 };
