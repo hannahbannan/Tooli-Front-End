@@ -16,7 +16,6 @@ const Profile = (props) => {
       });
   };
 
-  console.log(props.user)
 
   if (props.user) {
     return (

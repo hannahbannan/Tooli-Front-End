@@ -27,7 +27,6 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     axios
       .post(
-        // "http://localhost:3000/sessions",
         `${apiUrl}/sessions`,
         {
           user: {
