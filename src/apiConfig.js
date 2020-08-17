@@ -1,7 +1,7 @@
 let apiUrl;
 
 const apiUrls = {
-    production: "http://tooli-back-end.herokuapp.com/",
+    production: "https://tooli-back-end.herokuapp.com/",
     development: "http://localhost:3000"
 };
 
