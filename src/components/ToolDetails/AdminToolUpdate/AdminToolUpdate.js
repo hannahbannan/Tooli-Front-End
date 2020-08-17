@@ -19,6 +19,7 @@ const AdminToolUpdate = (props) => {
     });
   };
 
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     axios({
@@ -40,6 +41,7 @@ const AdminToolUpdate = (props) => {
 
 if (!isUpdated) {
   return (
+
     <div>
       <h1>Update Tool Info</h1>
       <form onSubmit={handleSubmit} className="register-form">

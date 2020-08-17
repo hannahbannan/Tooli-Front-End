@@ -7,6 +7,13 @@ import apiUrl from "../../apiConfig";
 const SiteDetails = (props) => {
   const [site, setSite] = useState(null);
 
+
+  const deleteSite = () => {
+    axios.delete(`${apiUrl}/sites/${props.match.params.id}`)
+    console.log('deleted!');
+    props.history.push('/sites')
+  }
+
   useEffect(() => {
     const makeAPICall = async () => {
       try {
@@ -31,7 +38,7 @@ const SiteDetails = (props) => {
           </div>
         </Link>
       );
-    });
+    })
 
     return (
       <div>
@@ -43,6 +50,7 @@ const SiteDetails = (props) => {
           <h4>Property Contact: {site.contact}</h4>
           <h2>Tools at this location:</h2>
           <div className="list">{toolsList}</div>
+          {props.user && props.user.isAdmin ? <button onClick={deleteSite}>Delete This Site</button> : null}
           <Link to="/sites">
             <h3>Back to All Sites</h3>
           </Link>

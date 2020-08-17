@@ -60,6 +60,12 @@ const ToolDetails = (props) => {
     let activeSite = tool.sites[tool.sites.length-1];
     let activeLog = tool.logs[tool.logs.length-1];
 
+    const deleteTool = async () => {
+      await axios.delete(`${apiUrl}/tools/${props.match.params.id}`);
+      console.log('deleted!');
+      props.history.push('/tools')
+    }
+
 
     const findLogger = async () => {
       try {
@@ -105,6 +111,7 @@ const ToolDetails = (props) => {
           </Link>
           <SingleMap lat={activeSite.lat} lng={activeSite.lng} />
           {props.user && props.user.isAdmin ? <AdminToolUpdate/> : null}
+          {props.user && props.user.isAdmin ? <button onClick={deleteTool}>Delete This Tool</button> : null}
         </div>
       </div>
     );
