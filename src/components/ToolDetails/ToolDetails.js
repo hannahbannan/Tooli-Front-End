@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import SingleMap from "../Map/SingleMap/SingleMap";
 import ToolUpdate from "./ToolUpdate/ToolUpdate";
 import AdminToolUpdate from "./AdminToolUpdate/AdminToolUpdate";
+import apiUrl from "../../apiConfig";
 
 const ToolDetails = (props) => {
   const [tool, setTool] = useState(null);
@@ -16,7 +17,7 @@ const ToolDetails = (props) => {
     const makeAPICall = async () => {
       try {
         const res = await axios(
-          `http://localhost:3000/tools/${props.match.params.id}`
+          `${apiUrl}/tools/${props.match.params.id}`
         );
         setTool(res.data);
       } catch (err) {
@@ -35,7 +36,7 @@ const ToolDetails = (props) => {
     const findLogger = async () => {
       try {
         const res = await axios(
-          `http://localhost:3000/users/${activeLog.user_id}`
+          `${apiUrl}/users/${activeLog.user_id}`
         );
         setLoggerF(res.data.firstname);
         setLoggerL(res.data.lastname);

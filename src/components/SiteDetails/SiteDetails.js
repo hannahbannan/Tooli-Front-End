@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SingleMap from "../Map/SingleMap/SingleMap";
+import apiUrl from "../../apiConfig";
 
 const SiteDetails = (props) => {
   const [site, setSite] = useState(null);
@@ -10,7 +11,7 @@ const SiteDetails = (props) => {
     const makeAPICall = async () => {
       try {
         const res = await axios(
-          `http://localhost:3000/sites/${props.match.params.id}`
+          `${apiUrl}/sites/${props.match.params.id}`
         );
         setSite(res.data);
       } catch (err) {

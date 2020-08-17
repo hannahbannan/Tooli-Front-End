@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import "./UpdateProfile.css";
 import {Redirect} from "react-router-dom";
+import apiUrl from "../../apiConfig";
 
 const UpdateProfile = (props) => {
     const [input, setInput] = useState({
@@ -29,7 +30,7 @@ const UpdateProfile = (props) => {
       const handleSubmit = event => {
           event.preventDefault();
           axios({
-              url: `http://localhost:3000/users/${props.match.params.id}`,
+              url: `${apiUrl}/users/${props.match.params.id}`,
               method: "PUT",
               data: input,
           })

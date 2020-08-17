@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
 import {Link} from "react-router-dom";
+import apiUrl from "../../apiConfig";
 
 const Login = (props) => {
   console.log("logged in", props.isLoggedIn);
@@ -26,7 +27,8 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     axios
       .post(
-        "http://localhost:3000/sessions",
+        // "http://localhost:3000/sessions",
+        `${apiUrl}/sessions`,
         {
           user: {
             email: input.email,

@@ -11,6 +11,7 @@ import ToolDetails from "./components/ToolDetails/ToolDetails";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import About from "./components/About/About"
 import axios from "axios";
+import apiUrl from "./apiConfig";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +37,8 @@ function App() {
   useEffect(() => {
     const checkLoginStatus = () => {
       axios
-        .get("http://localhost:3000/logged_in", { withCredentials: true })
+      // "http://localhost:3000/logged_in"
+        .get( `${apiUrl}/logged_in`, { withCredentials: true })
         .then((response) => {
           console.log("logged in?", response.data);
           if (response.data.logged_in && !isLoggedIn) {

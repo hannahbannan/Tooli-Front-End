@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Registration.css"
+import "./Registration.css";
+import apiUrl from "../../apiConfig";
 
 const Registration = (props) => {
 
@@ -27,7 +28,7 @@ const Registration = (props) => {
   }
 
   const handleSubmit = event => {
-    axios.post("http://localhost:3000/registrations", {
+    axios.post(`${apiUrl}/registrations`, {
         user: {
             firstname: input.firstname,
             lastname: input.lastname,

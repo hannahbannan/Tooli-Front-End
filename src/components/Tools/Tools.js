@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./Tools.css"
+import "./Tools.css";
+import apiUrl from "../../apiConfig";
 
 const Tools = (props) => {
   const [toolList, setToolList] = useState([]);
@@ -9,7 +10,7 @@ const Tools = (props) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const res = await axios("http://localhost:3000/tools");
+        const res = await axios(`${apiUrl}/tools`);
         setToolList(res.data);
       } catch (err) {
         console.error(err);

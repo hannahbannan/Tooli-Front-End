@@ -2,11 +2,12 @@ import React from "react";
 import axios from "axios";
 import "./Profile.css";
 import { Link } from "react-router-dom";
+import apiUrl from "../../apiConfig";
 
 const Profile = (props) => {
   const handleLogoutClick = () => {
     axios
-      .delete("http://localhost:3000/logout", { withCredentials: true })
+      .delete(`${apiUrl}/logout`, { withCredentials: true })
       .then((response) => {
         props.handleLogout();
       })

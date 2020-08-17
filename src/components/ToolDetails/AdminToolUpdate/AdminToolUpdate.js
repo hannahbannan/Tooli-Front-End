@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import apiUrl from "../../../apiConfig";
 
 const AdminToolUpdate = (props) => {
   const [input, setInput] = useState({
@@ -21,7 +22,7 @@ const AdminToolUpdate = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios({
-      url: `http://localhost:3000/tools/${props.match.params.id}`,
+      url: `${apiUrl}/tools/${props.match.params.id}`,
       method: "PUT",
       data: input,
     })

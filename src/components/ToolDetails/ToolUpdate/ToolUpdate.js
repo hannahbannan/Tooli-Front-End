@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import apiUrl from "../../../apiConfig";
 
 const ToolUpdate = ({ tool, user }) => {
   const [siteId, setSiteId] = useState({ value: null });
@@ -9,7 +10,7 @@ const ToolUpdate = ({ tool, user }) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const response = await axios("http://localhost:3000/sites");
+        const response = await axios(`${apiUrl}/sites`);
         setSiteList(response.data);
       } catch (err) {
         console.error(err);
@@ -29,7 +30,7 @@ const ToolUpdate = ({ tool, user }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:3000/logs", {
+      .post(`${apiUrl}/logs`, {
         log: {
           user_id: user.id,
           tool_id: tool.id,
