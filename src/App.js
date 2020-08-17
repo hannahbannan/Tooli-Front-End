@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, Redirect } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
 import SiteDetails from "./components/SiteDetails/SiteDetails";
@@ -12,6 +12,7 @@ import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 import About from "./components/About/About"
 import axios from "axios";
 import apiUrl from "./apiConfig";
+import Home from "./components/Home/Home"
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,7 +38,6 @@ function App() {
   useEffect(() => {
     const checkLoginStatus = () => {
       axios
-      // "http://localhost:3000/logged_in"
         .get( `${apiUrl}/logged_in`, { withCredentials: true })
         .then((response) => {
           console.log("logged in?", response.data);
@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to='/sites'>
+        <Link to='/home'>
         <img
           className="logo"
           src="https://res.cloudinary.com/hannahbannan/image/upload/v1597176492/Tooli/Tooli-logo_utgxgj.png"
@@ -93,6 +93,7 @@ function App() {
         )}
       </header>
       <Switch>
+        <Redirect exact from='/' to='/home'/>
         <Route
           path="/login"
           render={(props) => (
@@ -113,6 +114,7 @@ function App() {
             />
           )}
         />
+        <Route path="/home" component={Home}/>
         <Route
           path="/sites/:id"
           render={(props) => <SiteDetails {...props} isLoggedIn={isLoggedIn} user={user} />}

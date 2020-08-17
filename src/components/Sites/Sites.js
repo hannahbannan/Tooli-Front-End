@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Sites.css";
-import MapContainer from "../Map/MapContainer"
+import MapContainer from "../Map/MapContainer";
+import AddSite from "../AddSite/AddSite";
+import apiUrl from "../../apiConfig"
 
 
 const Sites = (props) => {
@@ -11,7 +13,7 @@ const Sites = (props) => {
   useEffect(() => {
     const makeAPICall = async () => {
       try {
-        const res = await axios("http://localhost:3000/sites");
+        const res = await axios(`${apiUrl}/sites`);
         setSiteList(res.data);
       } catch (err) {
         console.error(err);
@@ -39,6 +41,7 @@ const Sites = (props) => {
       <br/>
       <h1>Sites</h1>
       <div className="list">{sitesArr}</div>
+      {props.user && props.user.isAdmin ? <AddSite /> : null}
     </div>
   );
 };

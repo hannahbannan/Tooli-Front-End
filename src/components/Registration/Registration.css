@@ -12,21 +12,3 @@ input {
     width: 40vw;
 }
 
-button {
-    background-color: #fffd77;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 20px;
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.3rem;
-    color: #312F2F;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-   
-    background-color: #0D2A59;
-    color: #fffd77;
-    
-}

@@ -51,7 +51,7 @@ const Login = (props) => {
 
   if (props.isLoggedIn) {
     return (
-      <div>
+      <div className='already-logged'>
         <h3> Looks like you're already logged in!</h3>
         <Link to="/profile">
           <h2>Your profile</h2>
