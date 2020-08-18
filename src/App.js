@@ -101,6 +101,7 @@ function App() {
               {...props}
               isLoggedIn={isLoggedIn}
               handleLogin={handleLogin}
+              user={user}
             />
           )}
         />

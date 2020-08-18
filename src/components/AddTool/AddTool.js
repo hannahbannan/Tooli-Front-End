@@ -37,7 +37,7 @@ const AddTool = ({user}) => {
       ).then(response => {
         console.log(response.data)
       }).catch(err => {
-          console.log("tool add error", err)
+          console.log("tool add error", err);
       });
     
       event.preventDefault();

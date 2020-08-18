@@ -7,6 +7,7 @@ import AddTool from "../AddTool/AddTool";
 
 const Tools = (props) => {
   const [toolList, setToolList] = useState([]);
+  const [isUpdated, setIsUpdated] = useState(false)
 
   useEffect(() => {
     const makeAPICall = async () => {
@@ -35,7 +36,7 @@ const Tools = (props) => {
       <div>
         <h1>Tools</h1>
         <div className="list">{toolsArr}</div>
-        {props.user && props.user.isAdmin ? <AddTool user={props.user}/> : null}
+        {props.user && props.user.isAdmin ? <AddTool user={props.user} /> : null}
       </div>
     );
   } else {

@@ -48,7 +48,7 @@ const SiteDetails = (props) => {
           <h2>{site.address}</h2>
           <h3>Project Manager: {site.manager}</h3>
           <h4>Property Contact: {site.contact}</h4>
-          <h2>Tools at this location:</h2>
+          { tools[0] ? <h2>Tools at this location:</h2> : <h3>No tools at this location yet.</h3>}
           <div className="list">{toolsList}</div>
           {props.user && props.user.isAdmin ? <button onClick={deleteSite}>Delete This Site</button> : null}
           <Link to="/sites">
