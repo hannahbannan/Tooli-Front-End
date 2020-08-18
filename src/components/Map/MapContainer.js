@@ -3,15 +3,11 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import "./MapContainer.css";
 
 const MapContainer = ({ siteList, google }) => {
-  const sayHi = (el) => {
-    console.log(el.name)
-    return <InfoWindow>{el.name}</InfoWindow>
-  };
+  
 
   const displayMarkers = siteList.map((el) => {
     return (
       <Marker
-        onMouseover={sayHi}
         name={el.name}
         key={el.index}
         position={{
