@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import SingleMap from "../Map/SingleMap/SingleMap";
 import apiUrl from "../../apiConfig";
+import "./SiteDetails.css"
 
 const SiteDetails = (props) => {
   const [site, setSite] = useState(null);
@@ -42,9 +43,8 @@ const SiteDetails = (props) => {
     })
 
     return (
-      <div>
+      <div className="site-details">
         <h1>{site.name}</h1>
-        <SingleMap lat={site.lat} lng={site.lng} />
         <div className="details">
           <h2>{site.address}</h2>
           <h3>Project Manager: {site.manager}</h3>
@@ -56,6 +56,9 @@ const SiteDetails = (props) => {
             <h3>Back to All Sites</h3>
           </Link>
         </div>
+        <br />
+        <br />
+        <SingleMap lat={site.lat} lng={site.lng} />
       </div>
     );
   } else {

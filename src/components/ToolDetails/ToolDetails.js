@@ -79,7 +79,7 @@ const ToolDetails = (props) => {
       };
 
       return (
-        <div>
+        <div className="tool-details">
           <h1>{tool.name}</h1>
           <div className="details">
             <img src={tool.image} alt="{tool.name}" className="tool-img" />
@@ -99,12 +99,16 @@ const ToolDetails = (props) => {
             <Link to="/tools">
               <h3>Back to All Tools</h3>
             </Link>
-            <SingleMap lat={activeSite.lat} lng={activeSite.lng} />
+            </div>
+            <div className="updates">
             {props.user && props.user.isAdmin ? <AdminToolUpdate /> : null}
             {props.user && props.user.isAdmin ? (
               <button onClick={deleteTool}>Delete This Tool</button>
             ) : null}
           </div>
+          <br />
+          <br />
+          <SingleMap lat={activeSite.lat} lng={activeSite.lng} />
         </div>
       );
     }

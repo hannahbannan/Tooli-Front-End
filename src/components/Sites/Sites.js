@@ -35,14 +35,16 @@ const Sites = (props) => {
 
   if (props.user) {
     return (
-      <div>
-        <MapContainer siteList={siteList} />
+      <div className="sites">
         <br />
         <h1>Sites</h1>
         <div className="list">{sitesArr}</div>
         {props.user && props.user.isAdmin ? (
           <AddSite makeAPICall={makeAPICall} />
         ) : null}
+        <br />
+        <br />
+         <MapContainer siteList={siteList} />
       </div>
     );
   } else {

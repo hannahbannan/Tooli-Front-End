@@ -17,6 +17,7 @@
   padding: 10px;
   padding-left: 20px;
   border-bottom: 1px solid #fffd77;
+  z-index: 1000000;
 }
 
 .listing h3 {
@@ -26,4 +27,8 @@
 .make-login {
   margin: 0 auto;
   text-align: center;
+}
+
+.sites {
+    padding-bottom: 400px;
 }

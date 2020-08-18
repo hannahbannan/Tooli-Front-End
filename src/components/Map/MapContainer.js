@@ -28,9 +28,9 @@ const MapContainer = ({ siteList, google }) => {
 
   return (
     <div className="mappy">
-      <Map className="mappy-2"
+      <Map 
         google={google}
-        zoom={11}
+        zoom={12}
         style={mapStyles}
         initialCenter={{ lat: 34.0378, lng: -118.454 }}
       >

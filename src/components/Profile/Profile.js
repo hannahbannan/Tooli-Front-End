@@ -80,11 +80,13 @@ const Profile = (props) => {
           </div>
         </div>
         <div className="location">
-          <h2>Geolocation</h2>
-          <button onClick={getLocation}>Get Coordinates</button>
-          <h4>Latitude: {location.latitude}</h4>
-          <h4>Longitude: {location.longitude}</h4>
-          {location.latitude ? <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${location.latitude},${location.longitude}&zoom=15&size=300x300&sensor=false&markers=color:red%7C${location.latitude},${location.longitude}&key=AIzaSyAG8qPjaB7bbE9JEKzfbIWf_2FSwPAxX3E`} alt='map'/>:null}
+          <h2>Your Location</h2>
+          <button onClick={getLocation}>Get Location</button>
+          <br />
+          <br />
+          {/* <h4>Latitude: {location.latitude}</h4>
+          <h4>Longitude: {location.longitude}</h4> */}
+          {location.latitude ? <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${location.latitude},${location.longitude}&zoom=12&size=300x300&sensor=false&markers=color:red%7C${location.latitude},${location.longitude}&key=AIzaSyAG8qPjaB7bbE9JEKzfbIWf_2FSwPAxX3E`} alt='map'/>:null}
         </div>
       </div>
     );
