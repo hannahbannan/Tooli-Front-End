@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 import "./Sites.css";
 import MapContainer from "../Map/MapContainer";
 import AddSite from "../AddSite/AddSite";
-import apiUrl from "../../apiConfig"
-
+import apiUrl from "../../apiConfig";
 
 const Sites = (props) => {
   const [siteList, setSiteList] = useState([]);
-
 
   const makeAPICall = async () => {
     try {
@@ -21,11 +19,8 @@ const Sites = (props) => {
   };
 
   useEffect(() => {
-    
     makeAPICall();
   }, []);
-
-
 
   const sitesArr = siteList.map((el) => {
     return (
@@ -38,14 +33,25 @@ const Sites = (props) => {
     );
   });
 
-  return (
-    <div>
-      <MapContainer siteList={siteList}/>
-      <br/>
-      <h1>Sites</h1>
-      <div className="list">{sitesArr}</div>
-      {props.user && props.user.isAdmin ? <AddSite makeAPICall={makeAPICall}/> : null}
-    </div>
-  );
+  if (props.user) {
+    return (
+      <div>
+        <MapContainer siteList={siteList} />
+        <br />
+        <h1>Sites</h1>
+        <div className="list">{sitesArr}</div>
+        {props.user && props.user.isAdmin ? (
+          <AddSite makeAPICall={makeAPICall} />
+        ) : null}
+      </div>
+    );
+  } else {
+    return (
+      <div className="make-login">
+        <h4>Please log in to see your site dashboard.</h4>
+        <Link to='/login'><button>Login</button></Link>
+      </div>
+    );
+  }
 };
 export default Sites;

@@ -30,7 +30,7 @@ const Tools = (props) => {
       </Link>
     );
   });
-
+if (props.user) {
   if (toolList) {
     return (
       <div>
@@ -43,6 +43,13 @@ const Tools = (props) => {
     );
   } else {
     return <p>Loading tools...</p>;
+  }} else {
+    return(
+    <div className="make-login">
+        <h4>Please log in to see your tools.</h4>
+        <Link to='/login'><button>Login</button></Link>
+      </div>
+    )
   }
 };
 export default Tools;

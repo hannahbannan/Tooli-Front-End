@@ -9,10 +9,10 @@ import Tools from "./components/Tools/Tools";
 import Profile from "./components/Profile/Profile";
 import ToolDetails from "./components/ToolDetails/ToolDetails";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
-import About from "./components/About/About"
+import About from "./components/About/About";
 import axios from "axios";
 import apiUrl from "./apiConfig";
-import Home from "./components/Home/Home"
+import Home from "./components/Home/Home";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
     const checkLoginStatus = () => {
       axios
-        .get( `${apiUrl}/logged_in`, { withCredentials: true })
+        .get(`${apiUrl}/logged_in`, { withCredentials: true })
         .then((response) => {
           console.log("logged in?", response.data);
           if (response.data.logged_in && !isLoggedIn) {
@@ -59,24 +59,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to='/home'>
-        <img
-          className="logo"
-          src="https://res.cloudinary.com/hannahbannan/image/upload/v1597176492/Tooli/Tooli-logo_utgxgj.png"
-          alt="tooli-logo"
-        />
+        <Link to="/home">
+          <img
+            className="logo"
+            src="https://res.cloudinary.com/hannahbannan/image/upload/v1597176492/Tooli/Tooli-logo_utgxgj.png"
+            alt="tooli-logo"
+          />
         </Link>
         {isOpen ? (
           <i className="fas fa-bars" onClick={handleClickNav}></i>
         ) : (
           <nav className="nav">
             <p onClick={handleClickNav}>X</p>
-            <Link to="/sites" onClick={handleClickNav}>
-              Site Dashboard
-            </Link>
-            <Link to="/tools" onClick={handleClickNav}>
-              Tool List
-            </Link>
+            {user ? (
+              <>
+                <Link to="/sites" onClick={handleClickNav}>
+                  Site Dashboard
+                </Link>
+                <Link to="/tools" onClick={handleClickNav}>
+                  Tool List
+                </Link>{" "}
+              </>
+            ) : null}
             <Link to="/profile" onClick={handleClickNav}>
               My Profile
             </Link>
@@ -93,7 +97,7 @@ function App() {
         )}
       </header>
       <Switch>
-        <Redirect exact from='/' to='/home'/>
+        <Redirect exact from="/" to="/home" />
         <Route
           path="/login"
           render={(props) => (
@@ -115,35 +119,42 @@ function App() {
             />
           )}
         />
-        <Route path="/home" component={Home}/>
+        <Route path="/home" component={Home} />
         <Route
           path="/sites/:id"
-          render={(props) => <SiteDetails {...props} isLoggedIn={isLoggedIn} user={user} />}
+          render={(props) => (
+            <SiteDetails {...props} isLoggedIn={isLoggedIn} user={user} />
+          )}
         />
         <Route
-          exact path="/sites"
-          render={(props) => <Sites {...props} isLoggedIn={isLoggedIn} user={user} />}
+          exact
+          path="/sites"
+          render={(props) => (
+            <Sites {...props} isLoggedIn={isLoggedIn} user={user} />
+          )}
         />
         <Route
           path="/tools/:id"
-          render={(props) => <ToolDetails {...props} isLoggedIn={isLoggedIn} user={user}/>}
+          render={(props) => (
+            <ToolDetails {...props} isLoggedIn={isLoggedIn} user={user} />
+          )}
         />
         <Route
-          exact path="/tools"
-          render={(props) => <Tools {...props} isLoggedIn={isLoggedIn} user={user}/>}
+          exact
+          path="/tools"
+          render={(props) => (
+            <Tools {...props} isLoggedIn={isLoggedIn} user={user} />
+          )}
         />
         <Route
           path="/profile/:id"
           render={(props) => (
-            <UpdateProfile
-              {...props}
-              isLoggedIn={isLoggedIn}
-              user={user}
-            />
+            <UpdateProfile {...props} isLoggedIn={isLoggedIn} user={user} />
           )}
         />
         <Route
-          exact path="/profile"
+          exact
+          path="/profile"
           render={(props) => (
             <Profile
               {...props}
@@ -153,7 +164,7 @@ function App() {
             />
           )}
         />
-        <Route path='/about' component={About}/>
+        <Route path="/about" component={About} />
       </Switch>
     </div>
   );
