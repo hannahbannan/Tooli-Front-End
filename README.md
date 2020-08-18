@@ -55,7 +55,8 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Research user auth for admin      |    H     |       5        |       4       |      4      |
 |  Set up admin/crew routes          |    H     |       4        |       2       |      2      |
 |  Deploy server on heroku           |    H     |       2        |       6       |      6      |
-|  Total                             |    H     |      26        |      25       |     25      |
+|  Debug CORS issues                 |    H     |       0        |       2       |      2      |
+|  Total                             |    H     |      26        |      27       |     27      |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -73,9 +74,9 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 | Tool searchbar                                |    L     |       4        |               |             |
 | Tool details page w/ update form              |    H     |       5        |      4        |      4      |
 | Add Tool form (admin)                         |    M     |                |      2        |      2      |
-| Delete Tool form (admin)                      |    M     |                |               |             |
+| Delete Tool form (admin)                      |    M     |                |      1        |      1      |
 | Responsive Design                             |    H     |       6        |               |             |
-| CSS/ Styling                                  |    H     |       8        |      6        |             |
+| CSS/ Styling                                  |    H     |       8        |      7        |      7      |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
 | Site logo                                     |    M     |       2        |     1.5       |             |
 | Total                                         |          |       61       |      42       |             |
@@ -89,7 +90,7 @@ TOTAL HOURS: 86 Hours
 |  Location services to track tools  |    M     |       6        |               |             |
 |  Replenish tools: keep tally       |    L     |       6        |               |             |
 |  Add in site schedules             |    L     |       4        |               |             |
-|  About Simzee page                 |    L     |       3        |       1       |     1       |
+|  About Tooli page                  |    L     |       3        |       1       |     1       |
 | Total                              |          |       19       |       1       |             |
 
 # Components
@@ -127,5 +128,6 @@ Back End:
 
 
 # Bugs & Fixes:
-
+- Did not include the -d postgresql when I created my rails application. That gave me an issue trying to deploy to Heroku, so I had to go back and recreate a new database with that postgresql flag.
+- CORS issues with Heroku
 
