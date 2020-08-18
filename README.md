@@ -28,7 +28,6 @@ An inventory management application that tracks tools and construction equipment
 
 Wireframes: https://www.figma.com/file/shGPKshWY85azVCLIWpccp/Tooli?node-id=0%3A1
 
-
 Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 
 
@@ -55,31 +54,31 @@ Database architecture: https://dbdiagram.io/d/5f30a20208c7880b65c5a48f
 |  Research user auth for admin      |    H     |       5        |       4       |      4      |
 |  Set up admin/crew routes          |    H     |       4        |       2       |      2      |
 |  Deploy server on heroku           |    H     |       2        |       6       |      6      |
-|  Debug CORS issues                 |    H     |       0        |       2       |      2      |
-|  Total                             |    H     |      26        |      27       |     27      |
+|  Debug CORS issues                 |    H     |       0        |       3       |      3      |
+|  Total                             |    H     |      26        |      28       |     28      |
 
 | React/Front End                               | Priority | Estimated Time | Time Invested | Actual Time |
 | --------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Spin up React app                             |    H     |       1        |     0.5       |    0.5      |
-| Navbar & Footer                               |    H     |       2        |      1        |      1      |
+| Navbar                                        |    H     |       2        |      1        |      1      |
 | React Router                                  |    H     |       3        |      1        |      1      |
-| Login page                                    |    H     |       3        |      2        |      2      |
+| Login page                                    |    H     |       3        |      3        |      3      |
 | Registration page                             |    H     |       3        |      2        |      2      |
 | Profile page and update profile               |    H     |                |      3        |      3      |
 | Research login/cookies                        |    H     |       6        |      5        |      5      |
 | Sites list/dashboard                          |    H     |       4        |      4        |      4      |
-| Google Maps API research                      |    H     |       4        |      3        |      3      |
-| Implement google maps API for dashboard       |    H     |       3        |      3        |      3      |
+| Google Maps API research                      |    H     |       4        |      4        |      4      |
+| Implement google maps API for dashboard       |    H     |       3        |      4        |      4      |
 | Site details page w/ tools                    |    H     |       4        |      3        |      3      |
 | Tool searchbar                                |    L     |       4        |               |             |
 | Tool details page w/ update form              |    H     |       5        |      4        |      4      |
 | Add Tool form (admin)                         |    M     |                |      2        |      2      |
 | Delete Tool form (admin)                      |    M     |                |      1        |      1      |
-| Responsive Design                             |    H     |       6        |               |             |
-| CSS/ Styling                                  |    H     |       8        |      7        |      7      |
+| Responsive Design                             |    H     |       6        |      2        |      2      |
+| CSS/ Styling                                  |    H     |       8        |      8        |      8      |
 | Deploy on Netlify                             |    H     |       2        |     0.5       |     0.5     |
-| Site logo                                     |    M     |       2        |     1.5       |             |
-| Total                                         |          |       61       |      42       |             |
+| Site logo                                     |    M     |       2        |     1.5       |     1.5     |
+| Total                                         |          |       61       |    47.5       |    47.5     |
 
 TOTAL HOURS: 86 Hours
 
@@ -87,11 +86,11 @@ TOTAL HOURS: 86 Hours
 
 | Task                               | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------------- | :------: | :------------: | :-----------: | :---------: |
-|  Location services to track tools  |    M     |       6        |               |             |
+|  Location services to track tools  |    M     |       6        |       2       |     2       |
 |  Replenish tools: keep tally       |    L     |       6        |               |             |
 |  Add in site schedules             |    L     |       4        |               |             |
 |  About Tooli page                  |    L     |       3        |       1       |     1       |
-| Total                              |          |       19       |       1       |             |
+| Total                              |          |       19       |       3       |     3       |
 
 # Components
 
@@ -116,7 +115,7 @@ Front End:
 
 - Axios
 - React Router
-- Google Maps API
+- Google Maps API (Javascript Maps & Geocoding)
 
 Back End:
 
@@ -124,10 +123,8 @@ Back End:
 - bCrypt
 - Grape (ended up not using)
 
-# Code Snippet
-
-
 # Bugs & Fixes:
 - Did not include the -d postgresql when I created my rails application. That gave me an issue trying to deploy to Heroku, so I had to go back and recreate a new database with that postgresql flag.
-- CORS issues with Heroku
+- CORS issues with Heroku. Ended up being an issue with my master key/bcrypt in my production environment.
+- PostgresQL crashed overnight and I had to erase some redundant files
 
