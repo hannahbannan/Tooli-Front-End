@@ -13,15 +13,15 @@ const ToolDetails = (props) => {
   const [loggerL, setLoggerL] = useState(null);
   const [updateBox, setUpdateBox] = useState(false);
 
+  const makeAPICall = async () => {
+    try {
+      const res = await axios(`${apiUrl}/tools/${props.match.params.id}`);
+      setTool(res.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   useEffect(() => {
-    const makeAPICall = async () => {
-      try {
-        const res = await axios(`${apiUrl}/tools/${props.match.params.id}`);
-        setTool(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
     makeAPICall();
   }, []);
 
@@ -36,7 +36,7 @@ const ToolDetails = (props) => {
           <div className="details">
             <img src={tool.image} alt="{tool.name}" className="tool-img" />
             <button onClick={openUpdateBox}>Update tool location</button>
-            {updateBox ? <ToolUpdate tool={tool} user={props.user} /> : null}
+            {updateBox ? <ToolUpdate tool={tool} user={props.user} makeAPICall={makeAPICall}/> : null}
             <h3>
               Last logged by: {loggerF} {loggerL}
             </h3>

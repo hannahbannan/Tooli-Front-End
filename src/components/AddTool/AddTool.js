@@ -5,7 +5,7 @@ import apiUrl from "../../apiConfig";
 
 
 
-const AddTool = ({user}) => {
+const AddTool = ({user, makeAPICall}) => {
     console.log(user)
 
     const [input, setInput] = useState({
@@ -35,6 +35,7 @@ const AddTool = ({user}) => {
           }
       }, 
       ).then(response => {
+        makeAPICall();
         console.log(response.data)
       }).catch(err => {
           console.log("tool add error", err);

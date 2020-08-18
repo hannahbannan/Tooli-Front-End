@@ -10,15 +10,18 @@ import apiUrl from "../../apiConfig"
 const Sites = (props) => {
   const [siteList, setSiteList] = useState([]);
 
+
+  const makeAPICall = async () => {
+    try {
+      const res = await axios(`${apiUrl}/sites`);
+      setSiteList(res.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
-    const makeAPICall = async () => {
-      try {
-        const res = await axios(`${apiUrl}/sites`);
-        setSiteList(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+    
     makeAPICall();
   }, []);
 
@@ -41,7 +44,7 @@ const Sites = (props) => {
       <br/>
       <h1>Sites</h1>
       <div className="list">{sitesArr}</div>
-      {props.user && props.user.isAdmin ? <AddSite /> : null}
+      {props.user && props.user.isAdmin ? <AddSite makeAPICall={makeAPICall}/> : null}
     </div>
   );
 };

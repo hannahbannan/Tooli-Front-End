@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import apiUrl from "../../apiConfig";
 
-const AddSite = () => {
+const AddSite = ({makeAPICall}) => {
   const [input, setInput] = useState({
     name: "",
     address: "",
@@ -34,6 +34,7 @@ const AddSite = () => {
         },
       })
       .then((response) => {
+        makeAPICall();
         console.log(response.data);
       })
       .catch((err) => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import apiUrl from "../../../apiConfig";
 
-const ToolUpdate = ({ tool, user }) => {
+const ToolUpdate = ({ tool, user, makeAPICall }) => {
   const [siteId, setSiteId] = useState({ value: null });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [siteList, setSiteList] = useState([]);
@@ -38,6 +38,7 @@ const ToolUpdate = ({ tool, user }) => {
         },
       })
       .then((response) => {
+        makeAPICall();
         console.log("created log");
       })
       .catch((err) => {
@@ -54,7 +55,7 @@ const ToolUpdate = ({ tool, user }) => {
           <form onSubmit={handleSubmit} onChange={handleChange}>
             <select value={siteId}>{optionArr}</select>
             <br />
-            <button>Update location</button>
+            <button>Submit</button>
           </form>
         )}
       </div>

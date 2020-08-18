@@ -7,17 +7,17 @@ import AddTool from "../AddTool/AddTool";
 
 const Tools = (props) => {
   const [toolList, setToolList] = useState([]);
-  const [isUpdated, setIsUpdated] = useState(false)
+  const [isUpdated, setIsUpdated] = useState(false);
 
+  const makeAPICall = async () => {
+    try {
+      const res = await axios(`${apiUrl}/tools`);
+      setToolList(res.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   useEffect(() => {
-    const makeAPICall = async () => {
-      try {
-        const res = await axios(`${apiUrl}/tools`);
-        setToolList(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
     makeAPICall();
   }, []);
 
@@ -36,7 +36,9 @@ const Tools = (props) => {
       <div>
         <h1>Tools</h1>
         <div className="list">{toolsArr}</div>
-        {props.user && props.user.isAdmin ? <AddTool user={props.user} /> : null}
+        {props.user && props.user.isAdmin ? (
+          <AddTool user={props.user} makeAPICall={makeAPICall}/>
+        ) : null}
       </div>
     );
   } else {

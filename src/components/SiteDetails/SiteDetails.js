@@ -8,9 +8,10 @@ const SiteDetails = (props) => {
   const [site, setSite] = useState(null);
 
 
-  const deleteSite = () => {
+  const deleteSite = (event) => {
     axios.delete(`${apiUrl}/sites/${props.match.params.id}`)
     console.log('deleted!');
+    event.preventDefault();
     props.history.push('/sites')
   }
 
