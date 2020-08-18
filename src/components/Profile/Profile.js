@@ -84,7 +84,7 @@ const Profile = (props) => {
           <button onClick={getLocation}>Get Coordinates</button>
           <h4>Latitude: {location.latitude}</h4>
           <h4>Longitude: {location.longitude}</h4>
-          {location.latitude ? <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${location.latitude},${location.longitude}&zoom=15&size=400x300&sensor=false&markers=color:red%7C${location.latitude},${location.longitude}&key=AIzaSyAG8qPjaB7bbE9JEKzfbIWf_2FSwPAxX3E`} alt='map'/>:null}
+          {location.latitude ? <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${location.latitude},${location.longitude}&zoom=15&size=300x300&sensor=false&markers=color:red%7C${location.latitude},${location.longitude}&key=AIzaSyAG8qPjaB7bbE9JEKzfbIWf_2FSwPAxX3E`} alt='map'/>:null}
         </div>
       </div>
     );

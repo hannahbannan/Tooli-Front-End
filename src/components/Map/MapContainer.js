@@ -24,13 +24,15 @@ const MapContainer = ({ siteList, google }) => {
 
 
   const mapStyles = {
-    width: "50vw",
-    height: "40vh"
+    width: "80vw",
+    height: "40vh",
+    margin: "0 auto",
+    position: "center"
   };
 
   return (
     <div className="mappy">
-      <Map
+      <Map className="mappy-2"
         google={google}
         zoom={11}
         style={mapStyles}

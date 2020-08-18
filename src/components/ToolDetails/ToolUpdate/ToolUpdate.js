@@ -46,6 +46,7 @@ const ToolUpdate = ({ tool, user, makeAPICall }) => {
       });
 
     setIsSubmitted(true);
+
   };
 
   if (user) {

@@ -6,8 +6,10 @@ const SingleMap = (props) => {
 
 
   const mapStyles = {
-    width: "50vw",
-    height: "45vh",
+    width: "80vw",
+    height: "40vh",
+    margin: "0 auto",
+    position: "center"
   };
   return (
     <div className="mappy">

@@ -27,8 +27,9 @@ h4 {
   background-color: #EDEAE8;
   padding-bottom: 40px;
   border-radius: 20px;
-  padding: 15px;
+  padding: 10px;
   padding-bottom: 50px;
+  width: 100vw;
 }
 
 .App-header {
@@ -36,6 +37,7 @@ h4 {
   justify-content: space-between;
 }
 .nav {
+  position: center;
   display: flex;
   flex-direction: column;
   background-color: #0D2A59;
@@ -45,7 +47,7 @@ h4 {
   height: 90vh;
 }
 
-.nav a, p {
+.nav a, p {  
   text-decoration: none;
   color: white;
   font-family: 'Rubik', sans-serif;
@@ -103,4 +105,10 @@ button:hover {
   background-color: #0D2A59;
   color: #fffd77;
   
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+   width: 100vw;
+  }
 }

@@ -63,7 +63,7 @@ const Login = (props) => {
       <div>
         <h1>Login</h1>
         <form onSubmit={handleSubmit} className="register-form">
-          <label>Email</label>
+          <label>Email (case sensitive)</label>
           <input
             type="text"
             value={input.email}

@@ -1,0 +1,13 @@
+
+
+  .mappy {
+    height: 40vh;
+    width: 50vw;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .mappy {
+      width: 80vw
+    }
+  }
