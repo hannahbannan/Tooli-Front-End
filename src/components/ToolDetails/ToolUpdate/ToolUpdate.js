@@ -53,7 +53,7 @@ const ToolUpdate = ({ tool, user, makeAPICall }) => {
       <div>
         {isSubmitted ? null : (
           <form onSubmit={handleSubmit} onChange={handleChange}>
-            <select value={siteId}>{optionArr}</select>
+            <select value={siteId} name="sites">{optionArr}</select>
             <br />
             <button>Submit</button>
           </form>

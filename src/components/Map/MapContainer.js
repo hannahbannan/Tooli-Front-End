@@ -1,10 +1,11 @@
 import React from "react";
-import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import "./MapContainer.css";
 
 const MapContainer = ({ siteList, google }) => {
   const sayHi = (el) => {
-    console.log(el.name);
+    console.log(el.name)
+    return <InfoWindow>{el.name}</InfoWindow>
   };
 
   const displayMarkers = siteList.map((el) => {
@@ -20,6 +21,7 @@ const MapContainer = ({ siteList, google }) => {
       />
     );
   });
+
 
   const mapStyles = {
     width: "50vw",
