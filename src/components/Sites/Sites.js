@@ -86,8 +86,10 @@ const Sites = (props) => {
           <AddSite makeAPICall={makeAPICall} />
         ) : null}
         <br/>
-        <br/>
-        <button className="center" onClick={getLocation}>Add Your Location to Map</button>
+        
+        <div id="center">
+        <button  onClick={getLocation}>Add Your Location to Map</button>
+        </div>
         <br/>
         <br/>
          <MapContainer siteList={siteList} location={location}/>
