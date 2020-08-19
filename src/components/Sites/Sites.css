@@ -3,6 +3,7 @@
   border-radius: 10px;
   width: 80vw;
   margin: 0 auto;
+  text-align: center;
 }
 
 .list a {
@@ -32,3 +33,5 @@
 .sites {
     padding-bottom: 400px;
 }
+
+

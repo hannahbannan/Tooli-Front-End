@@ -30,6 +30,8 @@ const SiteDetails = (props) => {
     makeAPICall();
   }, []);
 
+  
+
   if (site) {
     let tools = site.tools;
     const toolsList = tools.map((el) => {

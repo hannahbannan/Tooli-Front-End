@@ -2,7 +2,7 @@ import React from "react";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 import "./MapContainer.css";
 
-const MapContainer = ({ siteList, google }) => {
+const MapContainer = ({ siteList, google, location }) => {
   
 
   const displayMarkers = siteList.map((el) => {
@@ -14,10 +14,15 @@ const MapContainer = ({ siteList, google }) => {
           lat: el.lat,
           lng: el.lng
         }}
+        icon={{url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}}
       />
     );
   });
 
+  console.log(location)
+
+
+  
 
   const mapStyles = {
     width: "80vw",
@@ -35,6 +40,7 @@ const MapContainer = ({ siteList, google }) => {
         initialCenter={{ lat: 34.0378, lng: -118.454 }}
       >
         {displayMarkers}
+        <Marker position={{lat: location.latitude, lng: location.longitude}} icon={{url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"}}/>
       </Map>
     </div>
   );

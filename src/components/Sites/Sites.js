@@ -22,6 +22,49 @@ const Sites = (props) => {
     makeAPICall();
   }, []);
 
+
+  const [location, setLocation] = useState({
+    latitude: "",
+    longitude: "",
+    userAddress: null,
+  });
+
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCoordinates);
+
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  };
+
+  const getCoordinates = (position) => {
+    setLocation({
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+    })
+  };
+
+  const handleLocationError = (error) => {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        alert("You denied the request for Geolocation.");
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert("Location information is currently unavailable.");
+        break;
+      case error.TIMEOUT:
+        alert("The request to get user location timed out.");
+        break;
+      case error.UNKNOWN_ERROR:
+        alert("An unknown error occurred.");
+        break;
+      default:
+        alert("An unknown error occurred.");
+    }
+  };
+
+
   const sitesArr = siteList.map((el) => {
     return (
       <Link to={`/sites/${el.id}`}>
@@ -42,9 +85,12 @@ const Sites = (props) => {
         {props.user && props.user.isAdmin ? (
           <AddSite makeAPICall={makeAPICall} />
         ) : null}
-        <br />
-        <br />
-         <MapContainer siteList={siteList} />
+        <br/>
+        <br/>
+        <button className="center" onClick={getLocation}>Add Your Location to Map</button>
+        <br/>
+        <br/>
+         <MapContainer siteList={siteList} location={location}/>
       </div>
     );
   } else {

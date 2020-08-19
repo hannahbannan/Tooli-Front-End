@@ -7,7 +7,6 @@ import AddTool from "../AddTool/AddTool";
 
 const Tools = (props) => {
   const [toolList, setToolList] = useState([]);
-  const [isUpdated, setIsUpdated] = useState(false);
 
   const makeAPICall = async () => {
     try {
