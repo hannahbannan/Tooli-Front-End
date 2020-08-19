@@ -26,13 +26,11 @@ function App() {
   const handleLogin = (data) => {
     setIsLoggedIn(true);
     setUser(data.user);
-    console.log("You're logged in!");
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setUser(null);
-    console.log("You're logged out!");
   };
 
   useEffect(() => {
@@ -40,7 +38,6 @@ function App() {
       axios
         .get(`${apiUrl}/logged_in`, { withCredentials: true })
         .then((response) => {
-          console.log("logged in?", response.data);
           if (response.data.logged_in && !isLoggedIn) {
             setIsLoggedIn(true);
             setUser(response.data.user);
